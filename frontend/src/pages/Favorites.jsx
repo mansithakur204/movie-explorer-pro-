@@ -7,7 +7,7 @@ function Favorites() {
 
   const fetchFavorites = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/favorites", {
+      const response = await fetch("https://movie-explorer-backend-u172.onrender.com/api/favorites", {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -29,7 +29,7 @@ function Favorites() {
 
   const removeFavorite = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/favorites/${id}`, {
+      await fetch(`https://movie-explorer-backend-u172.onrender.com/api/favorites/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -45,7 +45,7 @@ function Favorites() {
 
   const updateRating = async (id, rating) => {
     try {
-      await fetch(`http://localhost:5000/api/favorites/${id}/rating`, {
+      await fetch(`https://movie-explorer-backend-u172.onrender.com/api/favorites/${id}/rating`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function Favorites() {
 
   const addToWatchlist = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/watchlist/${id}`, {
+      await fetch(`https://movie-explorer-backend-u172.onrender.com/api/watchlist/${id}`, {
         method: "PUT",
         headers: {
           Authorization: localStorage.getItem("token"),

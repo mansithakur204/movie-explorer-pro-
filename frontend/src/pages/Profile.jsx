@@ -11,7 +11,7 @@ function Profile() {
 
   const fetchUser = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/me", {
+      const response = await fetch("https://movie-explorer-backend-u172.onrender.com/api/auth/me", {
         headers: {
           Authorization: localStorage.getItem("token"),
         },
@@ -27,7 +27,7 @@ function Profile() {
 
   const fetchFavoritesCount = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/favorites", {
+      const response = await fetch("https://movie-explorer-backend-u172.onrender.com/api/favorites", {
         headers: {
           Authorization: localStorage.getItem("token"),
         },

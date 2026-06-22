@@ -7,7 +7,7 @@ function Watchlist() {
   const fetchWatchlist = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/watchlist",
+        "https://movie-explorer-backend-u172.onrender.com/api/watchlist",
         {
           headers: {
             Authorization: localStorage.getItem("token"),
